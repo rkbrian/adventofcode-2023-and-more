@@ -17,7 +17,7 @@ function main() {
         var direction = 1;
         lines.forEach(line => {
                 direction = (line[0] == 'L' ? -1 : (line[0] == 'R' ? 1 : 0));
-                adder = +(line.match(/\d+/)?.[0] ?? 0); //convert the firtst number string to number, "+" sign the fastest
+                adder = +(line.match(/\d+/)?.[0] ?? 0); //convert the first number string to number (int), "+" sign the fastest way
                 pointerNum = (direction * adder + pointerNum + 100) % 100;
                 zeroCounter += (pointerNum == 0 ? 1 : 0);
         });
